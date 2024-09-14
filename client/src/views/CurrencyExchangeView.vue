@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container class="home-container">
     <el-form :model="form" class="exchange-form">
       <el-form-item label="金额">
         <el-input v-model="form.amount" type="number" placeholder="输入金额" />
@@ -82,6 +82,16 @@ onMounted(fetchCurrencies)
 </script>
 
 <style scoped>
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .exchange-form {
   width: 100%;
   max-width: 600px;
